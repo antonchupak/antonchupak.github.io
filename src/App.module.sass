@@ -1,4 +1,4 @@
-$main: white
+$main: #e1e1e1
 
 .app
   position: relative
@@ -13,18 +13,9 @@ $main: white
   font-family: 'Inconsolata', monospace
   z-index: 2
 
-.bg
-  position: fixed
-  top: 200px
-  left: 30%
-  width: 100%
-  height: 100%
-  background-image: url('https://i.imgur.com/UnB0Olf.jpg')
-  background-image: radial-gradient(circle, rgba(0,0,0,0) -10%, rgba(0,0,0,1) 120%), url('https://i.imgur.com/UnB0Olf.jpg')
-  background-size: cover
-  opacity: 0.7
-  z-index: 1
-
+@media screen and (max-width: 768px)
+  .app
+    padding: 40px
 
 \:global
   html, body

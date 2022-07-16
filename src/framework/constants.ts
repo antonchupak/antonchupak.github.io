@@ -1,5 +1,7 @@
-export const HELLO_TEXT = {
-  name: "Anton Chupak",
-  position: "Front-end developer",
-  description: "I'm a developer based in Kiev, Ukraine. Specialized in developing web applications in any complexity. Currently focused on React."
-};
+import { ISocialItem } from "interfaces";
+
+export const SOCIAL_ITEMS: ISocialItem[] = [
+  { name: "email", link: "mailto:tony.chupak@gmail.com" },
+  { name: "github", link: "https://github.com/antonchupak" },
+  { name: "linkedin", link: "https://www.linkedin.com/in/antonchupak" },
+];

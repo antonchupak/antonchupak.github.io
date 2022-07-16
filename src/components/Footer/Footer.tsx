@@ -1,20 +1,17 @@
-import * as React from 'react';
-import styles from './Footer.module.sass';
+import * as React from "react";
+import { Social } from "components";
 
-import Social from './../Social/Social';
+import styles from "./Footer.module.sass";
 
-interface IFooterProps {
-  social?: any[];
-  description?: string;
-}
+const Footer: React.FC = () => (
+  <footer className={styles.footer}>
+    <p className={styles.info}>
+      I'm a developer based in Kiev, Ukraine. Specialized in developing web
+      applications in any complexity. Currently focused on React.
+    </p>
 
-const Footer: React.FC<IFooterProps> = ({ social, description }) => {
-  return (
-    <footer className={styles.footer}>
-      <p className={styles.info}>{description}</p>
-      <Social />
-    </footer>
-  )
-};
+    <Social />
+  </footer>
+);
 
 export default Footer;

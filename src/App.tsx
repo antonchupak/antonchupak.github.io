@@ -1,35 +1,18 @@
-import React from 'react';
-import styles from './App.module.sass';
-
-// vendor
-import 'ress';
-
-// components
-import {
-  Header,
-  Footer
-} from './components';
-
-// other
-import { HELLO_TEXT } from './framework/constants';
+import React from "react";
+import "ress";
+import { Header, Footer, Parallax } from "components";
+import styles from "./App.module.sass";
 
 const App: React.FC = () => {
-  return <>
-    <div className={styles.app}>
-      
-      <Header
-        name={HELLO_TEXT.name}
-        position={HELLO_TEXT.position}
-      />
-
-      <Footer
-        description={HELLO_TEXT.description}
-      />
-
-    </div>
-    
-    <div className={styles.bg} />
-  </>;
-}
+  return (
+    <>
+      <div className={styles.app}>
+        <Header />
+        <Footer />
+      </div>
+      <Parallax />
+    </>
+  );
+};
 
 export default App;

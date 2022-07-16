@@ -37,9 +37,6 @@ yarn-error.log*
 # Optional eslint cache
 .eslintcache
 
-# Yarn Integrity file
-.yarn-integrity
-
 # System Files
 .DS_Store
 Thumbs.db

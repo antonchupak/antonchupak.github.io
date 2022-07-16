@@ -1,31 +1,28 @@
-import * as React from 'react';
-import styles from './Social.module.sass';
+import * as React from "react";
+import { ISocialItem } from "interfaces";
+import styles from "./Social.module.sass";
 
-interface Item {
-  name: string;
-  link: string;
-}
-
-interface ISocialProps {
-  items?: Item[];
-}
-
-const SOCIAL_ITEMS = [
-  { name: 'email', link: 'hi@antonchupak.dev' },
-  { name: 'github', link: 'https://github.com/antonchupak' },
-  { name: 'linkedin', link: 'https://www.linkedin.com/in/antonchupak' }
+const SOCIAL_ITEMS: ISocialItem[] = [
+  { name: "email", link: "mailto:tony.chupak@gmail.com" },
+  { name: "github", link: "https://github.com/antonchupak" },
+  { name: "linkedin", link: "https://www.linkedin.com/in/antonchupak" },
 ];
 
-const Social: React.FC<ISocialProps> = () => (
-  <ul className={styles.social}>
-    <h3 className={styles.socialTitle}>Say hello</h3>
-
-    {SOCIAL_ITEMS.map((item: Item, index: number) => (
-      <a className={styles.socialLink} href={item.link} key={`social-item-${index}`}>
-        <li className={styles.socialItem}>{item.name}</li>
+const Social: React.FC = () => {
+  const getItem = (item: ISocialItem, index: number) => (
+    <li className={styles.socialItem} key={`social-item-${index}`}>
+      <a className={styles.socialLink} href={item.link}>
+        {item.name}
       </a>
-    ))}
-  </ul>
-);
+    </li>
+  );
+
+  return (
+    <ul className={styles.social}>
+      <h3 className={styles.socialTitle}>say hello:</h3>
+      {SOCIAL_ITEMS.map(getItem)}
+    </ul>
+  );
+};
 
 export default Social;
